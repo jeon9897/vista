@@ -1,0 +1,282 @@
+@charset "utf-8";
+
+@media screen and (min-width:1000px) {
+
+header{
+  position:absolute;
+  width:100%;top:0px;
+  z-index:10;
+}
+
+#h_top{
+  height:27px;
+  background-color:#474747;
+}
+#h_top > nav{
+  width:1000px;
+  margin:0 auto;
+}
+
+#h_top .language{
+  width:180px;
+  margin-left:175px;
+  float:left;
+  display:flex;
+  justify-content: space-around;
+}
+
+#h_top .h_lnb{
+  width:400px;
+  float:right;
+  display:flex;
+  justify-content: space-around;
+}
+#h_top a{
+  text-transform: uppercase;
+  color:#cccccc;
+  line-height:27px;
+}
+#h_top .language > li:first-child > a{
+  font-weight:bold;
+  color:#ffffff;
+}
+
+#h_bottom{
+  width:1000px;
+  height:61px;
+  margin:0px auto;
+  position:relative; /* 부모요소 기준 */
+}
+#h_bottom > h1{
+  background-color:rgb(253, 25, 132);
+  width:120px;height:116px;
+  text-align:center;
+  padding-top:34px;
+  box-sizing:border-box; /* 크기에 패딩, 테두리값을 포함하여 계산 */
+  position:relative;top:-27px;
+}
+
+.gnb{
+  width:840px;
+  position:absolute;
+  right:0px;top:22px;
+}
+.gnb > ul{
+  display:flex;
+  justify-content:space-around;
+}
+#h_bottom .gnb > ul > li > a{
+  text-transform:uppercase;
+  color:#ffffff;
+  font-size:14px;
+}
+#h_bottom .gnb > ul > li:last-child{
+  background-color:rgb(253, 25, 132);
+  text-align:center;
+  width:90px;height:45px;
+  padding-top:16px;
+  position:relative;
+  top:-22px;left:25px;
+}
+#h_bottom .gnb > ul > li:last-child > a{
+  color:#ffffff;
+}
+.gnb > ul > li > a:hover{
+  font-weight:bold;
+}
+/* li태그에 마우스 오버시 a요소 뒤에 선이 나오도록 한다. */
+.gnb > ul > li:hover > a::after{
+  content:"";
+  display:block;
+  width:100%;
+  height:3px;
+  background-color:#ffffff;
+  position:relative;
+  top:22px;
+}
+.gnb > ul > li:last-child:hover > a:after{
+  height:0px;
+}
+
+main{
+  /* 헤더에서 사용된 플로트속성 해제 */
+  clear:both; 
+  /* 콘텐츠영역을 벗어난 콘텐츠 숨기기 - 가로스크롤바가 안생기게.  */
+  overflow:hidden;
+}
+
+/* 메인콘텐츠 서식 */
+
+#slide{
+  position:relative;
+}
+#slide > h2{display:none;}
+#slide .btn{
+  width:1200px;
+  /* margin:0px auto; */
+  position:absolute;
+  z-index:5;
+  top:45%;
+  left:50%;
+  transform:translateX(-600px);
+}
+.btn a{
+  position:absolute;
+  color:#ffffff;
+  text-transform: uppercase;
+}
+.btn a:first-child{left:0px;}
+.btn a:last-child{right:0px;}
+
+/* 방향버튼 서식 */
+.btn a:first-child::before{
+  content:"";
+  background-image:url('../images/btn_slide07.gif');
+  width:38px;height:12px;
+  display:inline-block;
+}
+.btn a:first-child:hover::before{
+  background-position:0px -12px;
+}
+
+.btn a:last-child::after{
+  content:"";
+  background-image:url('../images/btn_slide07.gif');
+  width:38px;height:12px;
+  display:inline-block;
+  background-position:-38px 0px;
+}
+.btn a:last-child:hover::after{
+  background-position:-38px -12px;
+}
+
+/* 스페셜 오퍼 */
+#s_offer{
+  width:1000px;height:865px;
+  padding:100px 0px;
+  margin:0px auto;
+}
+#s_offer > h2{
+  text-align:center;
+  font-size:40px;
+  text-transform:uppercase;
+  font-weight:800;
+  padding-bottom:180px;
+}
+
+#s_offer > ul{display:flex;}
+#s_offer > ul > li{
+  position:relative;
+  border-bottom:1px solid #ccc;
+  padding-bottom:50px;
+}
+#s_offer > ul > li:nth-child(odd){
+  top:70px;
+}
+#s_offer > ul > li:nth-child(even){}
+
+
+/* 제목서식 */
+.s_title{
+  font-size:18px;
+  font-weight:bold;
+  padding:10px 5px;
+  display:block;
+}
+.description{
+  font-size:13px;
+  line-height:22px;
+  text-indent:10px;
+  display:block;
+}
+.price{
+  text-indent:10px;
+  display:inline-block;
+}
+.t_title{
+  background-color:rgb(0, 153, 255);
+  color:#fff;
+  font-weight:bold;
+  padding:20px 8px;
+  position:absolute;
+  top:-15px;left:0px;
+}
+
+/* about vista */
+#about{
+  width:100%;
+  padding:99px 0px 100px 0px;
+  height:476px;
+  background-color:#00a499;
+}
+
+.about_inner{
+  width:1000px;
+  margin:0px auto;
+  color:#ffffff;
+}
+.about_txt{
+  width:333px;
+  float:left;
+}
+
+.p01{
+  font-size:24px;
+  font-weight:lighter;
+  line-height:26px;
+  color:#f1f1f1;
+  padding:12px 0px 20px 0px;
+}
+.p02{
+  font-size:14px;
+  line-height:24px;
+}
+
+.about_stay{
+  width:667px;
+  float:left;
+  padding:0px 0px 40px 0px;
+  box-sizing:border-box; /* 박스크기에 테두리, 패딩값을 포함하여 계산 */
+  border-bottom:1px solid #ffffff;
+}
+.about_stay dl{
+  text-align:center;
+}
+.about_stay dt{
+  font-size:18px;
+  font-weight:bold;
+  text-align:center;
+  letter-spacing:2px;
+  position:relative;
+  padding-bottom:30px;
+}
+.about_stay dt::before, .about_stay dt::after{
+  content:"";
+  display:block;
+  width:180px;height:1px;
+  background-color:#ffffff;
+  position:absolute;top:12px;
+}
+.about_stay dt::before{left:0px;}
+.about_stay dt::after{right:0px;}
+
+.about_stay dd{
+  width:134px;height:84px;
+  display:inline-block; /* 가로, 세로크기, 여백설정, 글자처럼 정렬도 가능 */
+  text-align:center;
+}
+.about_stay dd span{
+  display:block;
+  padding:8px 0px;
+}
+
+
+/* 
+  display:inline;
+  display:inline-block;
+  display:flex;
+  float:left;
+*/
+
+
+}

@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>워커힐 비스타</title>
+    <!-- 1. css초기화 -->
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
+
+    <!-- 2. 공통서식 -->
+    <link href="./css/base.css" rel="stylesheet" type="text/css">
+
+    <!-- 3. 레이아웃 서식 -->
+    <link href="./css/layout.css" rel="stylesheet" type="text/css">
+
+    <!-- 4. pc화면 서식 -->
+    <link href="./css/pc.css" rel="stylesheet" type="text/css">
+
+    <!-- 5. tablet화면 서식 -->
+    <link href="./css/tablet.css" rel="stylesheet" type="text/css">
+
+    <!-- 6. mobile화면 서식 -->
+    <link href="./css/mobile.css" rel="stylesheet" type="text/css">
+
+    <!-- 스와이퍼 슬라이드 서식 -->
+    <link href="./css/swiper.css" rel="stylesheet" type="text/css">
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        background-position: center;
+        background-size: cover;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+      }
+    </style>
+    <!-- 스와이퍼 제이쿼리 -->
+    <script src="./js/swiper.js"></script>
+  </head>
+  <body>
+
+    <!-- 헤더영역 시작 -->
+    <header>
+      <input type="checkbox" id="toggle">
+      
+      <div id="h_top">
+        <nav>
+          <ul class="language">
+            <li><a href="#" title="kor">kor</a></li>
+            <li><a href="#" title="eng">eng</a></li>
+            <li><a href="#" title="chi">chi</a></li>
+            <li><a href="#" title="jpn">jpn</a></li>
+          </ul>
+
+          <ul class="h_lnb">
+            <li><a href="#" title="로그인">로그인</a></li>
+            <li><a href="#" title="워커힐 멤버십 가입">워커힐 멤버십 가입</a></li>
+            <li><a href="#" title="예약확인">예약확인</a></li>
+            <li><a href="#" title="고객센터">고객센터</a></li>
+            <li><a href="#" title="브랜드">브랜드</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="h_bottom">
+        <h1><a href="index.html" title="메인페이지로 바로가기">
+          <img src="./images/txt_vista01_off.png" alt="상단로고">
+        </a></h1>
+
+        <label for="toggle">
+          <img src="./images/total.png" alt="전체메뉴" class="total_btn">
+        </label>
+
+        <a href="#" title="로그인" class="login_btn">
+          <img src="./images/login_btn1.png" alt="">
+        </a>
+
+        <nav class="gnb">
+          <label for="toggle" class="close_btn">
+          <img src="./images/btn_close01.png" alt="닫기">
+          </label>
+
+          <ul>
+            <li>
+              <a href="#" title="welcome">welcome</a>
+              <ul class="sub">
+                <li><a href="#" title="비스타 소개">aboute vista</a></li>
+                <li><a href="#" title="갤러리">gallery</a></li>
+                <li><a href="#" title="서비스">service</a></li>
+                <li><a href="#" title="로케이션">location</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="rooms">rooms</a>
+              <ul class="sub">
+                <li><a href="#" title="오버뷰">overviews</a></li>
+                <li><a href="#" title="디럭스">vista deluxe</a></li>
+                <li><a href="#" title="발코니">vista deluxe balcony</a></li>
+                <li><a href="#" title="스파">spa deluxe</a></li>
+                <li><a href="#" title="코너 슈트">junior corner suite</a></li>
+                <li><a href="#" title="스파 슈트">junior spa suite</a></li>
+                <li><a href="#" title="스튜디오">studio suite</a></li>
+                <li><a href="#" title="코너">corner suite</a></li>
+                <li><a href="#" title="스파">spa suite</a></li>
+                <li><a href="#" title="앰배서더">ambassador suite</a></li>
+                <li><a href="#" title="스파슈트">super spa suite</a></li>
+                <li><a href="#" title="프레지덴셜">presidential suite</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="dining">dining</a>
+              <ul class="sub">
+                <li><a href="#" title="오버뷰">overviews</a></li>
+                <li><a href="#" title="비노">del vino</a></li>
+                <li><a href="#" title="모기">moegi</a></li>
+                <li><a href="#" title="바">re:bar</a></li>
+                <li><a href="#" title="피자힐">pizza hill</a></li>
+                <li><a href="#" title="명월관">명월관</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="wellness club">wellness club</a>
+              <ul class="sub">
+                <li><a href="#" title="피트니스 풀">fitness & pool</a></li>
+                <li><a href="#" title="프로그램">wellness program</a></li>
+                <li><a href="#" title="스파">v spa</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="facilities">facilities</a>
+              <ul class="sub">
+                <li><a href="#" title="경험">experience</a></li>
+                <li><a href="#" title="웨딩과 미팅">wedding &amp; meeting</a></li>
+                <li><a href="#" title="베이커리">print bakery</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="offers">offers</a>
+              <ul class="sub">
+                <li><a href="#" title="룸 오퍼">room offer</a></li>
+                <li><a href="#" title="이벤트">dinning &amp; events</a></li>
+                <li><a href="#" title="웰니스">wellness gx</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#" title="book room">book<br>a room</a></li>
+          </ul>
+         </nav>
+      </div>
+    </header>
+
+    <!-- 메인영역 시작 -->
+    <main>
+      <section id="slide">
+        <h2>메인슬라이드</h2>
+
+        <div class="swiper-container main_slide">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./images/main_slide01.jpg" alt="메인01"></div>
+            <div class="swiper-slide"><img src="./images/main_slide02.jpg" alt="메인02"></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- <div class="btn">
+          <a href="#" title="이전">prev</a>
+          <a href="#" title="다음">next</a>
+        </div> -->
+
+      </section>
+
+      <!-- 스페셜 오퍼 -->
+      <section id="s_offer">
+        <h2>special offers</h2>
+
+        <ul>
+          <li>
+            <a href="#" title="">
+              <img src="./images/29321.jpg" alt="">
+              <span class="s_title">VIVID LOUNGE</span>
+              <span class="description">2021.04.01 ~ 2021.12.31</span>
+              <span class="price">KRW 330,000 ~</span>
+              <span class="t_title">Promotion</span>
+            </a>
+            
+          </li>
+
+          <li>
+            <a href="#" title="">
+              <img src="./images/29569.jpg" alt="">
+              <span class="s_title">VIVID LOUNGE</span>
+              <span class="description">2021.04.01 ~ 2021.12.31</span>
+              <span class="price">KRW 330,000 ~</span>
+              <span class="t_title">Promotion</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" title="">
+              <img src="./images/29941.jpg" alt="">
+              <span class="s_title">VIVID LOUNGE</span>
+              <span class="description">2021.04.01 ~ 2021.12.31</span>
+              <span class="price">KRW 330,000 ~</span>
+              <span class="t_title">Promotion</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" title="">
+              <img src="./images/27832.jpg" alt="">
+              <span class="s_title">VIVID LOUNGE</span>
+              <span class="description">2021.04.01 ~ 2021.12.31</span>
+              <span class="price">KRW 330,000 ~</span>
+              <span class="t_title">Promotion</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 어바웃 비스타(소개) -->
+      <section id="about">
+        <div class="about_inner">
+          <article class="about_txt">
+            <h2><img src="./images/h2_aboutVista.png" alt="어바웃 비스타"></h2>
+            <p class="p01">Discover Extraordinary<br>
+              Experience at VISTA</p>
+            <p class="p02">생동감 넘치는 아차산과 한강의 에너지를 품은<br>
+              비스타 워커힐 서울에서 색다른 여행을 시작해 보세요.<br>
+              비스타 워커힐 서울은 세련된 인테리어와 감각적<br>
+              디자인 그리고 활력 넘치는 프로그램들을 통해 새로운<br>
+              라이프 스타일을 선도합니다.</p>
+          </article>
+
+          <article class="about_stay">
+            <dl>
+            <dt>WHY STAY WITH VISTA?</dt>
+            <dd>
+                <img src="./images/ico_nature01.png" alt="skyard">
+                <span>SKYARD</span>
+            </dd>
+              <dd>
+                <img src="./images/ico_wellness01.png" alt="wellness">
+                <span>WELLNESS</span>
+              </dd>
+              <dd>
+                <img src="./images/ico_pet01.png" alt="pet">
+                <span>PET LOVE</span>
+              </dd>
+              <dd>
+                <img src="./images/ico_minibar.png" alt="mini bar">
+                <span>FREE MINI BAR</span>
+              </dd>
+              <dd>
+                <img src="./images/ico_spa01.png" alt="spa">
+                <span>PREMIUM SPA</span>
+              </dd>
+              <dd>
+                <img src="./images/ico_point01.png" alt="point">
+                <span>REWARDS POINTS</span>
+              </dd>
+              <dd>
+                <img src="./images/ico_wifi01.png" alt="wifi">
+                <span>FREE WIFI</span>
+              </dd>
+              <dd>
+                <img src="./images/ico_checkOut01.png" alt="check out">
+                <span>EXPRESS CHECK OUT</span>
+              </dd>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 푸터영역 시작 -->
+    <footer></footer>
+
+   <script>
+     var swiper = new Swiper(".main_slide", {
+        spaceBetween: 30,
+        effect: "fade",
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+  </script>
+  </body>
+</html>

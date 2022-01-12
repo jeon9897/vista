@@ -1,0 +1,325 @@
+@charset "utf-8";
+
+@media screen and (min-width:768px) and (max-width:999px) {
+  /* 태블릿 서식 */
+  header{
+    position:absolute;
+    width:100%;top:0px;left:0px;
+    z-index:10;
+  }
+  
+  #h_top{
+    width:100%;
+    height:27px;
+    background-color:#474747;
+  }
+  #h_top > nav{
+    width:90%;
+    margin:0 auto;
+  }
+  
+  #h_top .language{
+    width:180px;
+    margin-left:175px;
+    float:left;
+    display:flex;
+    justify-content: space-around;
+  }
+  
+  #h_top .h_lnb{
+    width:44.44%;
+    float:right;
+    display:flex;
+    justify-content: space-around;
+  }
+  #h_top a{
+    text-transform: uppercase;
+    color:#cccccc;
+    line-height:27px;
+  }
+  #h_top .language > li:first-child > a{
+    font-weight:bold;
+    color:#ffffff;
+  }
+  
+  #h_bottom{
+    width:100%;
+    height:61px;
+    position:relative; /* 부모요소 기준 */
+  }
+  #h_bottom > h1{
+    background-color:rgb(253, 25, 132);
+    width:120px;height:116px;
+    text-align:center;
+    padding-top:34px;
+    box-sizing:border-box; /* 크기에 패딩, 테두리값을 포함하여 계산 */
+    position:relative;top:-27px;
+    z-index:1000;
+  }
+  
+  .gnb{
+    width:76%;
+    position:absolute;
+    right:0px;top:22px;
+  }
+  .gnb > ul{
+    display:flex;
+    justify-content:space-around;
+  }
+  .gnb > ul::after{
+    width:999px;height:600px;
+    background-color:rgba(255,255,255,.7);
+    display:none;
+    content:"";
+    position:absolute;top:40px;left:-35%;
+  }
+  .gnb > ul > li{
+    position:relative; /* 부모요소를 기준 설정 */
+    text-align:center;
+  }
+  .gnb > ul > li:nth-child(2) .sub{
+    left:-20px;
+  }
+  .gnb > ul > li:nth-child(3) .sub{
+    left:-10px;
+  }
+  .gnb > ul > li:nth-child(6) .sub{
+    left:-5px;
+  }
+
+  #h_bottom .gnb > ul > li > a{
+    text-transform:uppercase;
+    color:#ffffff;
+    font-size:14px;
+  }
+  #h_bottom .gnb > ul > li:last-child{
+    background-color:rgb(253, 25, 132);
+    text-align:center;
+    width:90px;height:45px;
+    padding-top:16px;
+    position:relative;
+    top:-22px;left:10px;
+  }
+  #h_bottom .gnb > ul > li:last-child > a{
+    color:#ffffff;
+  }
+  .gnb > ul > li > a:hover{
+    font-weight:bold;
+  }
+  /* li태그에 마우스 오버시 a요소 뒤에 선이 나오도록 한다. */
+  .gnb > ul > li:hover > a::after{
+    content:"";
+    display:block;
+    width:100%;
+    height:3px;
+    background-color:#ffffff;
+    position:relative;
+    top:22px;
+  }
+  .gnb > ul > li:last-child:hover > a:after{
+    height:0px;
+  }
+  /* 서브서식  */
+  .sub{
+    position:absolute;top:40px;
+    z-index:100;
+    display:none; 
+  }
+  .sub > li{}
+  .sub > li > a{
+    text-transform:uppercase;
+    font-size:0.8rem;
+    line-height:30px;
+    display:block;
+  }
+
+  .total_btn{
+    position:absolute;
+    left:130px;top:10px;
+  }
+
+  /* 전체메뉴 클릭시 서브메뉴 나오게 하기 */
+#toggle:checked ~ #h_bottom .gnb .sub{display:block;}
+
+/* 전체메뉴 클릭시 서브메뉴 박스 보이게하기 */
+#toggle:checked ~ #h_bottom .gnb > ul::after{
+  display:block;
+}
+
+
+
+
+
+/* 메인영역 서식 */
+  main{
+    /* 헤더에서 사용된 플로트속성 해제 */
+    clear:both; 
+    /* 콘텐츠영역을 벗어난 콘텐츠 숨기기 - 가로스크롤바가 안생기게.  */
+    overflow:hidden;
+  }
+  main #slide img{width:100%;}
+  #slide{
+    position:relative;
+  }
+  #slide > h2{display:none;}
+  #slide .btn{
+    width:100%;
+    position:absolute;
+    z-index:5;
+    top:45%;
+  }
+  .btn a{
+    position:absolute;
+    color:#ffffff;
+    text-transform: uppercase;
+  }
+  .btn a:first-child{left:1%;}
+  .btn a:last-child{right:1%;}
+
+  /* 방향버튼 서식 */
+  .btn a:first-child::before{
+    content:"";
+    background-image:url('../images/btn_slide07.gif');
+    width:38px;height:12px;
+    display:inline-block;
+  }
+  .btn a:first-child:hover::before{
+    background-position:0px -12px;
+  }
+
+  .btn a:last-child::after{
+    content:"";
+    background-image:url('../images/btn_slide07.gif');
+    width:38px;height:12px;
+    display:inline-block;
+    background-position:-38px 0px;
+  }
+  .btn a:last-child:hover::after{
+    background-position:-38px -12px;
+  }
+
+  
+/* 스페셜 오퍼 */
+#s_offer{
+  width:100%;height:665px;
+  padding:100px 0px;
+}
+#s_offer > h2{
+  text-align:center;
+  font-size:40px;
+  text-transform:uppercase;
+  font-weight:800;
+  padding-bottom:130px;
+}
+
+#s_offer > ul{display:flex;}
+#s_offer > ul > li{
+  width:25%;
+  position:relative;
+  border-bottom:1px solid #ccc;
+  padding-bottom:50px;
+}
+#s_offer > ul > li:nth-child(odd){
+  top:70px;
+}
+#s_offer > ul > li:nth-child(even){}
+#s_offer > ul > li img{
+  width:100%;
+}
+
+/* 제목서식 */
+.s_title{
+  font-size:18px;
+  font-weight:bold;
+  padding:10px 5px;
+  display:block;
+}
+.description{
+  font-size:13px;
+  line-height:22px;
+  text-indent:10px;
+  display:block;
+}
+.price{
+  text-indent:10px;
+  display:inline-block;
+}
+.t_title{
+  background-color:rgb(0, 153, 255);
+  color:#fff;
+  font-weight:bold;
+  padding:20px 8px;
+  position:absolute;
+  top:-15px;left:0px;
+}
+
+/* about vista */
+#about{
+  width:100%;
+  padding:60px 0px 100px 0px;
+  height:476px;
+  background-color:#00a499;
+}
+
+.about_inner{
+  width:100%;
+  color:#ffffff;
+}
+.about_txt{
+  width:35%;
+  margin:0px auto;
+  padding-bottom:60px;
+}
+
+.p01{
+  font-size:24px;
+  font-weight:lighter;
+  line-height:26px;
+  color:#f1f1f1;
+  padding:12px 0px 20px 0px;
+}
+.p02{
+  font-size:14px;
+  line-height:24px;
+}
+
+.about_stay{
+  width:100%;
+  padding:0px 0px 40px 0px;
+  box-sizing:border-box; /* 박스크기에 테두리, 패딩값을 포함하여 계산 */
+  border-bottom:1px solid #ffffff;
+}
+.about_stay dl{
+  width:70%;
+  margin:0px auto;
+  text-align:center;
+}
+.about_stay dt{
+  font-size:18px;
+  font-weight:bold;
+  text-align:center;
+  letter-spacing:2px;
+  position:relative;
+  padding-bottom:30px;
+}
+.about_stay dt::before, .about_stay dt::after{
+  content:"";
+  display:block;
+  width:180px;height:1px;
+  background-color:#ffffff;
+  position:absolute;top:12px;
+}
+.about_stay dt::before{left:0px;}
+.about_stay dt::after{right:0px;}
+
+.about_stay dd{
+  width:134px;height:84px;
+  display:inline-block; /* 가로, 세로크기, 여백설정, 글자처럼 정렬도 가능 */
+  text-align:center;
+}
+.about_stay dd span{
+  display:block;
+  padding:8px 0px;
+}
+
+}
